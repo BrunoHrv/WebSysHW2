@@ -1,0 +1,90 @@
+<html>
+<head>
+<title></title>
+<link href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" rel="Stylesheet"
+type="text/css" />
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<style type="text/css">
+#output
+{
+width: 100px;
+height: 100px;
+border: solid 1px #ccc;
+}
+#redslide, #greenslide, #blueslide
+{
+height: 15px;
+margin: 10px 0px;
+width: 350px;
+}
+        
+#redslide .ui-slider-range
+{
+background: red;
+}
+#redslide .ui-slider-handle
+{
+border-color: red;
+}
+#greenslide .ui-slider-range
+{
+background: green;
+}
+#greenslide .ui-slider-handle
+{
+border-color: green;
+}
+#blueslide .ui-slider-range
+{
+background: blue;
+}
+#blueslide .ui-slider-handle
+{
+border-color: blue;
+}
+</style>
+<script language="javascript">
+$(document).ready(function () {
+$("#redslide, #greenslide, #blueslide").slider({
+orientation: "horizontal",
+range: "min",
+max: 255,
+value: 127,
+slide: showOutput,
+change: showOutput
+});
+$("#redslide").slider("value", 150);
+$("#greenslide").slider("value", 50);
+$("#blueslide").slider("value", 100);
+
+});
+function showOutput() {
+var hexa = getHexaFromRGB($("#redslide").slider("value"),
+$("#greenslide").slider("value"),
+$("#blueslide").slider("value"));
+$("#output").css("background-color", "#" + hexa);
+}
+
+function getHexaFromRGB(r, g, b) {
+var hexa = [r.toString(16), g.toString(16), b.toString(16)];
+$.each(hexa, function (nr, val) {
+if (val.length === 1) {
+hexa[nr] = "0" + val;
+}
+});
+return hexa.join("").toUpperCase();
+}
+</script>
+</head>
+<body>
+<div id="output">
+</div>
+<div id="redslide">
+</div>
+<div id="greenslide">
+</div>
+<div id="blueslide">
+</div>
+</body>
+</html>
