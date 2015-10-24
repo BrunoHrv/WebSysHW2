@@ -104,7 +104,7 @@
 		
 		}
 
-			
+		//update square color based on slider position
 		function showOutput() {
 			var hexa = getHexaFromRGB($("#redslide").slider("value"),
 			$("#greenslide").slider("value"),
@@ -113,7 +113,7 @@
 
 		}
 
-
+		// generate hex color value from slider position
 		function getHexaFromRGB(r, g, b) {
 			var hexa = [r.toString(16), g.toString(16), b.toString(16)];
 			$.each(hexa, function (nr, val) {
@@ -132,7 +132,7 @@
 			referenceGreen = Math.floor((Math.random() * 255) + 0);
 			referenceBlue = Math.floor((Math.random() * 255) + 0);
 
-			//turn shit into a hex code
+			//turn values into a hex code
 			var referenceHex = [referenceRed.toString(16), referenceGreen.toString(16), referenceBlue.toString(16)];
 			$.each(referenceHex, function (nr, val) {
 			if (val.length === 1) {
