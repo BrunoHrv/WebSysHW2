@@ -1,15 +1,4 @@
-/*$(document).ready(function () {
-	$("#redslide, #greenslide, #blueslide").slider({
-	orientation: "horizontal",
-	range: "min",
-	max: 255,
-	value: 127,
-	slide: showOutput,
-	change: showOutput
-	});
-	newGame();
 
-});*/
 
 (function($) {  //wrapper function to localize the scope of the plugin so global variables don't fuck it up
 

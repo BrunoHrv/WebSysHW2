@@ -1,24 +1,42 @@
-#output
+#output, #reference
 {
 width: 100px;
 height: 100px;
-border: solid 1px #ccc;
+margin: 0 auto;
+padding: 10px 0 10px;
 }
 
-#reference
+#hold
 {
-width: 100px;
-height: 100px;
-border: solid 1px #ccc;
+width: 723px;
+margin: 0 auto;
+padding: 10px 0 10px;
+}
+
+#hexAnswer, #hexAnswerOutput
+{
+text-align: center;
+}
+
+
+#redAnswer, #greenAnswer, #blueAnswer, #redHex, #greenHex, #blueHex
+{
+display: inline-block;
 }
 
 #redslide, #greenslide, #blueslide
 {
+display: inline-block;
 height: 15px;
 margin: 10px 0px;
 width: 350px;
 }
-		
+
+#redHex, #greenHex, #blueHex
+{
+	margin-left: 25px;
+}
+
 #redslide .ui-slider-range
 {
 background: red;
@@ -44,4 +62,9 @@ background: blue;
 #blueslide .ui-slider-handle
 {
 border-color: blue;
+}
+
+#submit
+{
+	width: 100px;
 }
