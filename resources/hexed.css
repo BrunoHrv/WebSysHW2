@@ -2,8 +2,8 @@
 {
 width: 100px;
 height: 100px;
-margin: 0 auto;
-padding: 10px 0 10px;
+margin: 10px auto;
+padding: 10px;
 }
 
 #hold
@@ -12,12 +12,6 @@ width: 723px;
 margin: 0 auto;
 padding: 10px 0 10px;
 }
-
-#hexAnswer, #hexAnswerOutput
-{
-text-align: center;
-}
-
 
 #redAnswer, #greenAnswer, #blueAnswer, #redHex, #greenHex, #blueHex
 {
@@ -28,13 +22,14 @@ display: inline-block;
 {
 display: inline-block;
 height: 15px;
-margin: 10px 0px;
+margin: 10px;
 width: 350px;
 }
 
-#redHex, #greenHex, #blueHex
+#redAnswer, #greenAnswer, #blueAnswer, #hexAnswer, #score
 {
 	margin-left: 25px;
+	margin-right: 25px;
 }
 
 #redslide .ui-slider-range
@@ -64,7 +59,8 @@ background: blue;
 border-color: blue;
 }
 
-#submit
+#submit, #newGame
 {
 	width: 100px;
+	margin: 10px;
 }
